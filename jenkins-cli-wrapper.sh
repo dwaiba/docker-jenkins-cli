@@ -12,7 +12,7 @@ else
 
   cli_jar="$url_hash/jenkins-cli.jar"
   if [ ! -f "$cli_jar" ]; then
-    wget "$JENKINS_URL/jnlpJars/jenkins-cli.jar" -q -O "$cli_jar"
+    wget --no-check-certificate "$JENKINS_URL/jnlpJars/jenkins-cli.jar" -q -O "$cli_jar"
   fi
 
   if [ -f "$PRIVATE_KEY" ]; then
